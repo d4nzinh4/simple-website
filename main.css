@@ -1,0 +1,79 @@
+:root { /*representa o elemento <html> na página HTML*/
+
+    --black: #212020;
+    --darkBlack: #000000;
+    --red: #FF0000;
+    --green: #008000;
+    --grey: #c3c3c3;
+    --lightPink: #FF69B4;
+    --white: #ffffff;
+}
+
+* { /*seletor universal que se aplica a todos os elementos da página (exceto quando um seletor de elemento mais específico o substitui)*/
+    color: var(--fontColor);
+    font-family: cursive;
+}
+
+body {
+    background: var(--bg);
+}
+
+ul { /*O elemento de lista não ordenada ul {} é um seletor que seleciona o elemento HTML <ul> ao qual aplicará os estilos*/
+    font-family: cursive;
+}
+
+li {
+    list-style: square;
+}
+
+.list { /*atributo personalizado*/
+    list-style: square;
+}
+
+/*#msg { *atributo personalizado
+    font-family: cursive;
+} comentei ele para que a mesma fonte possa ser aplicada a todos os elementos*/
+
+.pink-theme {
+    --bg: var(--lightPink); /*variavel representando background*/
+    --fontColor: var(--red); /*palavra-chave para especificar as variáveis que serão usadas como valores de propriedade*/
+    --btnBg: var(--black);
+    --btnFontColor: var(--grey);
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--darkBlack);
+    --btnBg: var(--darkBlack);
+    --btnFontColor: var(--green);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--grey);
+    --btnBg: var(--white);
+    --btnFontColor: var(--darkBlack);
+}
+.matrix-theme {
+    --bg: var(--darkBlack);
+    --fontColor: var(--green);
+    --btnBg: var(--lightPink);
+    --btnFontColor: var(--red);
+}
+
+.btn {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    right: 100px;
+    height: 80px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background: var(--btnBg);
+}
+
+.btn:focus {
+    outline-style: none;
+}
